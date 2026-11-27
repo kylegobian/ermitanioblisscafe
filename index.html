@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#241810">
+  <meta name="description" content="Brew & Bliss Café — thoughtfully roasted coffee, brewed for your everyday moments.">
+  <title>Brew & Bliss Café | Find Your Everyday Bliss</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">A little joy in every cup <span>✦</span> Free shipping on orders over ₱1,500</div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Brew and Bliss home">
+      <span class="brand-mark">B<span>✳</span></span>
+      <span class="brand-name">brew <i>&</i> bliss<small>COFFEE HOUSE</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav id="mainNav">
+      <a href="#home">Home</a><a href="#shop">Shop</a><a href="#story">About Us</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="profile-trigger" id="profileOpen" aria-label="Open profile">Account</button>
+      <button class="cart-trigger" id="cartOpen" aria-label="Open shopping cart">Bag <span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> YOUR DAILY MOMENT OF BLISS</p>
+        <h1>Good days<br>start with <em>great coffee.</em></h1>
+        <p class="hero-description">Thoughtfully sourced, freshly roasted, and made for the moments that make your day.</p>
+        <div class="hero-actions"><a class="btn btn-dark" href="#shop">Explore our coffee <span>↗</span></a><a class="text-link" href="#story">A little about us <span>→</span></a></div>
+        <div class="hero-note"><div class="avatar-stack"><span>☕</span><span>✿</span><span>♡</span></div><p><strong>Made with care.</strong><br><small>For coffee people, by coffee people.</small></p></div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image"></div>
+        <div class="image-stamp"><span>FRESHLY</span><strong>BREWED</strong><span>HAPPINESS ✳</span></div>
+        <div class="floating-note">slow mornings<br><b>better coffee.</b></div>
+      </div>
+      <div class="hero-bottom"><span>SCROLL TO DISCOVER</span><span>01 — 04</span></div>
+    </section>
+
+    <section class="perks">
+      <div><span>✳</span><p><b>Thoughtfully sourced</b><small>Beans with a story</small></p></div>
+      <div><span>♨</span><p><b>Freshly roasted</b><small>Small-batch goodness</small></p></div>
+      <div><span>♡</span><p><b>Made for your ritual</b><small>Your cup, your moment</small></p></div>
+    </section>
+
+    <section class="shop-section section-pad" id="shop">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE GOOD STUFF</p><h2>Your next favorite<br><em>cup is here.</em></h2></div>
+        <p class="section-intro">From slow mornings to afternoon pick-me-ups, find the coffee that feels just right.</p>
+      </div>
+      <div class="shop-toolbar">
+        <div class="filters" role="group" aria-label="Filter products">
+          <button class="filter active" data-filter="all">All coffee</button><button class="filter" data-filter="beans">Whole beans</button><button class="filter" data-filter="ground">Ground</button><button class="filter" data-filter="ready">Ready to drink</button><button class="filter" data-filter="gifts">Gift sets</button>
+        </div>
+        <label class="sort-label">Sort by <select id="sortSelect"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select></label>
+      </div>
+      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+    </section>
+
+    <section class="quote-band">
+      <div class="quote-mark">“</div><p>Coffee is more than a drink.<br>It's a <em>moment to come back to yourself.</em></p><span>— THE BREW & BLISS WAY</span>
+    </section>
+
+    <section class="story section-pad" id="story">
+      <div class="story-photo"><div class="story-photo-inner"></div><span class="photo-caption">A slower kind of everyday.</span></div>
+      <div class="story-copy"><p class="eyebrow">A NOTE FROM OUR LITTLE CORNER</p><h2>Made for the<br><em>love of the brew.</em></h2>
+        <p>We believe the best coffee isn't just about the beans. It's about the pause before a busy day, the catch-up with a friend, and the little ritual that's all yours.</p>
+        <p>That's why we keep things thoughtful: good beans, careful roasting, and coffee made to bring a little more joy to your everyday.</p>
+        <a class="text-link" href="#contact">Say hello to us <span>→</span></a>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div><p class="eyebrow">A GOOD THING IN YOUR INBOX</p><h2>Stay in the <em>coffee loop.</em></h2><p>New roasts, brewing tips, and little treats. No coffee spam, promise.</p></div>
+      <form id="newsletterForm" class="newsletter-form"><label class="sr-only" for="newsletterEmail">Your email address</label><input type="email" id="newsletterEmail" placeholder="Your email address" required><button class="btn btn-light" type="submit">Count me in <span>→</span></button><small id="newsletterStatus" aria-live="polite"></small></form>
+    </section>
+
+    <section class="contact section-pad" id="contact">
+      <div class="contact-info"><p class="eyebrow">WE'D LOVE TO HEAR FROM YOU</p><h2>Let's have a<br><em>coffee chat.</em></h2><p>Questions about a roast? Need help with an order? Send us a note and we'll get back to you.</p>
+        <div class="contact-detail"><span>✉</span><div><small>EMAIL US</small><b>brewandblisscafe@gmail.com</b></div></div>
+        <div class="contact-detail"><span>◎</span><div><small>FOLLOW ALONG</small><b>@brewandblisscafe</b></div></div>
+        
+      </div>
+      <form class="contact-form" id="contactForm">
+        <div class="form-row"><label>Your name<input name="name" type="text" placeholder="Name" required></label><label>Email address<input name="email" type="email" placeholder="you@example.com" required></label></div>
+        <label>Subject<input name="subject" type="text" placeholder="What can we help with?" required></label>
+        <label>Your message<textarea name="message" rows="5" placeholder="Tell us what's on your mind..." required></textarea></label>
+        <button class="btn btn-dark" type="submit">Send your message <span>↗</span></button>
+        <p class="form-status" id="contactStatus" aria-live="polite">This demo opens your email app to send the message.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="brand brand-footer" href="#home"><span class="brand-mark">B<span>✳</span></span><span class="brand-name">brew <i>&</i> bliss<small>COFFEE HOUSE</small></span></a><p>Good coffee. Good company. Good little moments.</p><div class="footer-links"><a href="#shop">Shop</a><a href="#story">About Us</a><a href="#contact">Contact</a><a href="#" id="footerAccount">My account</a></div><small>© <span id="year"></span> Brew & Bliss Café. Made with ☕.</small></footer>
+
+  <section class="page-panel" id="accountPanel" aria-labelledby="accountTitle" aria-hidden="true">
+    <div class="panel-top">
+      <a class="text-link" href="#home" id="accountBack">← Back to shopping</a>
+      <button class="icon-btn" id="accountClose" aria-label="Close account">×</button>
+    </div>
+    <div class="account-wrap">
+      <p class="eyebrow">YOUR BREW & BLISS ACCOUNT</p>
+      <h2 id="accountTitle">A little space<br><em>just for you.</em></h2>
+      <div id="authView" class="account-card">
+        <div class="auth-tabs" role="tablist" aria-label="Account access">
+          <button class="auth-tab active" type="button" data-auth-tab="signin">Sign in</button>
+          <button class="auth-tab" type="button" data-auth-tab="signup">Create account</button>
+        </div>
+        <form id="signInForm" class="account-form">
+          <label>Email address<input name="email" type="email" placeholder="you@example.com" required></label>
+          <label>Password<input name="password" type="password" placeholder="Your password" required></label>
+          <button class="btn btn-dark" type="submit">Sign in <span>→</span></button>
+          <p class="form-status">Demo account only. Your details stay in this browser.</p>
+        </form>
+        <form id="signUpForm" class="account-form hidden">
+          <div class="form-row">
+            <label>Full name<input name="name" type="text" placeholder="Your full name" required></label>
+            <label>Contact number<input name="phone" type="tel" placeholder="09XX XXX XXXX" required></label>
+          </div>
+          <label>Email address<input name="email" type="email" placeholder="you@example.com" required></label>
+          <label>Password<input name="password" type="password" minlength="4" placeholder="Create a password" required></label>
+          <label>Delivery address<textarea name="address" rows="3" placeholder="House number, street, barangay, city" required></textarea></label>
+          <button class="btn btn-dark" type="submit">Create my account <span>→</span></button>
+          <p class="form-status">This is a front-end demonstration. Do not use a real password.</p>
+        </form>
+      </div>
+      <div id="profileView" class="account-card hidden">
+        <div class="profile-heading"><div class="profile-avatar" id="profileInitials">B</div><div><p class="eyebrow">WELCOME BACK</p><h3 id="profileName">Coffee friend</h3><p id="profileEmail" class="muted-text"></p></div></div>
+        <form id="profileForm" class="account-form">
+          <label>Full name<input name="name" type="text" required></label>
+          <label>Email address<input name="email" type="email" required></label>
+          <label>Contact number<input name="phone" type="tel" required></label>
+          <label>Delivery address<textarea name="address" rows="3" required></textarea></label>
+          <button class="btn btn-dark" type="submit">Save profile <span>✓</span></button>
+        </form>
+        <button class="text-link logout-link" id="signOutBtn" type="button">Sign out</button>
+        <div class="order-history"><p class="eyebrow">RECENT ACTIVITY</p><p id="orderHistoryText" class="muted-text">Your confirmed demo orders will appear here.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-panel" id="checkoutPanel" aria-labelledby="checkoutTitle" aria-hidden="true">
+    <div class="panel-top">
+      <button class="text-link" id="checkoutBack" type="button">← Back to bag</button>
+      <span class="checkout-step">CHECKOUT · ORDER REVIEW</span>
+    </div>
+    <div class="checkout-wrap">
+      <div class="checkout-intro"><p class="eyebrow">ALMOST YOURS</p><h2 id="checkoutTitle">Confirm the details.<br><em>Then enjoy the brew.</em></h2><p class="muted-text">Review your delivery information and choose how you would like to pay.</p></div>
+      <div class="checkout-layout">
+        <form id="checkoutForm" class="checkout-form">
+          <section class="checkout-card">
+            <div class="checkout-card-heading"><span>01</span><div><h3>Delivery details</h3><p>Where should we send your coffee?</p></div></div>
+            <label>Full name<input name="name" id="checkoutName" type="text" required placeholder="Recipient name"></label>
+            <div class="form-row">
+              <label>Contact number<input name="phone" id="checkoutPhone" type="tel" required placeholder="09XX XXX XXXX"></label>
+              <label>Email address<input name="email" id="checkoutEmail" type="email" required placeholder="you@example.com"></label>
+            </div>
+            <label>Complete delivery address<textarea name="address" id="checkoutAddress" rows="3" required placeholder="House/unit, street, barangay, city, province"></textarea></label>
+            <p class="form-status">Please confirm that your contact number and address are correct.</p>
+          </section>
+          <section class="checkout-card">
+            <div class="checkout-card-heading"><span>02</span><div><h3>Payment method</h3><p>Select your preferred payment option.</p></div></div>
+            <div class="payment-options">
+              <label class="payment-option"><input type="radio" name="payment" value="Cash on Delivery (COD)" checked><span class="payment-icon">₱</span><span><b>Cash on Delivery (COD)</b><small>Pay in cash when your order arrives.</small></span></label>
+              <label class="payment-option"><input type="radio" name="payment" value="GCash / E-wallet"><span class="payment-icon">◎</span><span><b>GCash / E-wallet</b><small>Demo selection only — no wallet connection.</small></span></label>
+              <label class="payment-option"><input type="radio" name="payment" value="Debit / Credit Card"><span class="payment-icon">▤</span><span><b>Debit / Credit Card</b><small>Demo selection only — no card details or charge.</small></span></label>
+            </div>
+            <p class="demo-payment-note"><b>Demo checkout:</b> Choosing E-wallet or Card does not open a payment gateway, collect financial details, or process a real transaction.</p>
+          </section>
+          <label class="confirm-check"><input type="checkbox" id="detailsConfirm" required> I confirm that my delivery details and selected payment method are correct.</label>
+          <button class="btn btn-dark place-order-btn" type="submit">Confirm demo order <span>→</span></button>
+          <p class="form-status">No real payment will be collected. This website is a front-end demonstration.</p>
+        </form>
+        <aside class="order-summary checkout-card">
+          <p class="eyebrow">YOUR ORDER</p><h3>Order summary</h3>
+          <div id="checkoutItems" class="checkout-items"></div>
+          <div class="summary-line"><span>Subtotal</span><b id="checkoutSubtotal">₱0</b></div>
+          <div class="summary-line"><span>Shipping</span><b id="checkoutShipping">Calculated at demo checkout</b></div>
+          <div class="summary-line summary-total"><span>Total</span><b id="checkoutTotal">₱0</b></div>
+        </aside>
+      </div>
+      <div id="orderSuccess" class="order-success hidden" role="status">
+        <div class="success-mark">✓</div><p class="eyebrow">ORDER CONFIRMED</p><h2>Thank you for choosing<br><em>Brew & Bliss.</em></h2>
+        <p id="successMessage">Your demo order has been saved in this browser.</p>
+        <button class="btn btn-dark" id="continueShopping" type="button">Continue shopping <span>→</span></button>
+      </div>
+    </div>
+  </section>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-head"><div><p class="eyebrow">YOUR LITTLE COFFEE HAUL</p><h3>Your bag <span id="drawerCount">(0)</span></h3></div><button id="cartClose" class="icon-btn" aria-label="Close cart">×</button></div>
+    <div class="cart-items" id="cartItems"><div class="empty-cart">Your bag is looking a little empty.<br><span>Let's find you something good. ☕</span></div></div>
+    <div class="cart-bottom"><div class="subtotal"><span>Subtotal</span><b id="cartSubtotal">₱0</b></div><p>Shipping and taxes calculated at checkout.</p><button class="btn btn-dark checkout-btn" id="checkoutBtn">Continue to checkout <span>→</span></button><small class="checkout-note">checkout is a preview and no payment is collected.</small></div>
+  </aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
